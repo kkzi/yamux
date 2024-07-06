@@ -23,7 +23,7 @@ namespace libp2p::connection {
     }
 
     inline std::tuple<BytesOut, BytesOut> split(BytesOut span, size_t n) {
-      return {span.subspan(0, ssize_t(n)), span.subspan(ssize_t(n))};
+      return {span.subspan(0, int64_t(n)), span.subspan(int64_t(n))};
     }
 
   }  // namespace

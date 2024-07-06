@@ -18,7 +18,7 @@ set(CMAKE_TOOLCHAIN_FILE
     )
 
 cmake_policy(SET CMP0048 NEW)
-cmake_policy(SET CMP0135 NEW)
+#cmake_policy(SET CMP0135 NEW)
 
 include("cmake/Hunter/init.cmake")
 
@@ -108,7 +108,11 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/include
 )
 
+include_directories(include ${Boost_INCLUDE_DIRS})
+set(CMAKE_CXX_STANDARD 20)
+
 add_subdirectory(src)
+add_subdirectory(demo)
 
 if(EXAMPLES)
   add_subdirectory(example)

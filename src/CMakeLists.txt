@@ -4,22 +4,28 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+
+include_directories(include ${Boost_INCLUDE_DIRS})
+set(CMAKE_CXX_STANDARD 20)
+
+
+
 add_subdirectory(basic)
 add_subdirectory(common)
 add_subdirectory(connection)
-add_subdirectory(crypto)
-add_subdirectory(host)
-add_subdirectory(layer)
-add_subdirectory(log)
-add_subdirectory(multi)
+#add_subdirectory(crypto)
+#add_subdirectory(host)
+#add_subdirectory(layer)
+#add_subdirectory(log)
+#add_subdirectory(multi)
 add_subdirectory(muxer)
-add_subdirectory(network)
-add_subdirectory(peer)
-add_subdirectory(protocol)
-add_subdirectory(protocol_muxer)
-add_subdirectory(security)
-add_subdirectory(storage)
-add_subdirectory(transport)
+#add_subdirectory(network)
+#add_subdirectory(peer)
+#add_subdirectory(protocol)
+#add_subdirectory(protocol_muxer)
+#add_subdirectory(security)
+#add_subdirectory(storage)
+#add_subdirectory(transport)
 
 add_library(p2p
     libp2p.cpp

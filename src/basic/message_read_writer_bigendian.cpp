@@ -8,7 +8,12 @@
 
 #include <vector>
 
-#include <arpa/inet.h>
+#if _WIN32
+    #include <Windows.h>
+#else
+    #include <arpa/inet.h>
+#endif
+
 #include <boost/assert.hpp>
 #include <libp2p/basic/message_read_writer_error.hpp>
 #include <libp2p/basic/write_return_size.hpp>

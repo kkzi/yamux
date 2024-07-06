@@ -71,7 +71,7 @@ namespace libp2p::multi {
     }
 
     Code code;
-    ssize_t size;
+    int64_t size;
     std::string_view name;
   };
 
